@@ -14,8 +14,23 @@ const Items = () => {
     }, [])
 
     const addToCartBtn = (item) => {
+
+
         const newCart = [...cart, item];
-        setCart(newCart);
+        if (newCart.length <= 4) {
+            setCart(newCart);
+        }
+        else {
+            alert('Sorry!! You have reached maximum products');
+        }
+
+
+        return newCart;
+    }
+    const getChooseOneBtn = () => {
+        let newCartItem = addToCartBtn();
+        console.log(newCartItem);
+
     }
 
 
@@ -38,11 +53,15 @@ const Items = () => {
                 <h5>Selected item:{cart.length}</h5>
                 <div>
                     {
-                        cart.map(cartItem => <h5>{cartItem.name}</h5>)
+                        cart.map(cartItem => (< h5 key={cartItem._id}> {cartItem.name}</h5>)
+
+                        )
                     }
+
                 </div>
+                <button onClick={getChooseOneBtn}>Choose One for me</button>
             </div>
-        </div>
+        </div >
     );
 };
 
