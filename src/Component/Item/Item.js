@@ -1,5 +1,6 @@
 import React from 'react';
 import './Item.css';
+import { BsFillCartFill } from 'react-icons/bs'
 
 
 
@@ -10,11 +11,13 @@ const Item = (props) => {
 
 
         <div className='item'>
-            <img src={picture} alt="" />
-            <h5>name:{name}</h5>
-            <p>Price: {price}tk</p>
+            <div className="item-info">
+                <img src={picture} alt="" />
+                <h5>name:{name}</h5>
+                <p>Price: {price}tk</p>
+            </div>
             <button className='btn-cart' onClick={() => props.addToCartBtn(props.item)} >
-                <p>Add to cart</p></button>
+                <p> <BsFillCartFill className='icon' />Add to cart</p></button>
         </div>
 
 

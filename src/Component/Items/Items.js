@@ -14,11 +14,8 @@ const Items = () => {
     }, [])
 
     const addToCartBtn = (item) => {
-
-        console.log(item.name);
         const newCart = [...cart, item];
         setCart(newCart);
-
     }
 
 
@@ -39,6 +36,11 @@ const Items = () => {
 
                 <h3>Order summery</h3>
                 <h5>Selected item:{cart.length}</h5>
+                <div>
+                    {
+                        cart.map(cartItem => <h5>{cartItem.name}</h5>)
+                    }
+                </div>
             </div>
         </div>
     );
