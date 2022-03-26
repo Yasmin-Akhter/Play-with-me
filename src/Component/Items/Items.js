@@ -5,6 +5,7 @@ import './items.css'
 const Items = () => {
     const [items, setItems] = useState([]);
     const [cart, setCart] = useState([]);
+    const [randItem, setRandItem] = useState([]);
 
 
     useEffect(() => {
@@ -24,14 +25,22 @@ const Items = () => {
             alert('Sorry!! You have reached maximum products');
         }
 
+        // getChooseOneBtn(newCart);
 
-        return newCart;
     }
     const getChooseOneBtn = () => {
-        let newCartItem = addToCartBtn();
-        console.log(newCartItem);
+        const rIndex = Math.floor(Math.random() * cart.length);
+        // randItem = cart[rIndex];
+        // const newRandItem = [...randItem];
+        setRandItem(cart[rIndex]);
+        // console.log(randItem[rIndex].name);
+        // return randItem[rIndex].name;
+
+
 
     }
+
+
 
 
     return (
@@ -50,16 +59,22 @@ const Items = () => {
             <div className="cart-container">
 
                 <h3>Order summery</h3>
-                <h5>Selected item:{cart.length}</h5>
+                <h4>Selected item:{cart.length}</h4>
                 <div>
                     {
-                        cart.map(cartItem => (< h5 key={cartItem._id}> {cartItem.name}</h5>)
+                        cart.map(cartItem => (< h6 key={cartItem._id}> {cartItem.name}</h6>)
 
                         )
                     }
 
                 </div>
+                {
+                    <p> Choosen Item:{randItem.name}</p>
+                }
                 <button onClick={getChooseOneBtn}>Choose One for me</button>
+
+
+                <button>Choose again</button>
             </div>
         </div >
     );

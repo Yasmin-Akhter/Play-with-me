@@ -17,7 +17,7 @@ const Item = (props) => {
                 <p>Price: {price}tk</p>
             </div>
             <button className='btn-cart' onClick={() => props.addToCartBtn(props.item)} >
-                <p> <BsFillCartFill className='icon' />Add to cart</p></button>
+                <p> Add to cart <BsFillCartFill className='icon' /></p></button>
         </div>
 
 
