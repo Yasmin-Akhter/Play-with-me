@@ -4,6 +4,7 @@ import './items.css'
 
 const Items = () => {
     const [items, setItems] = useState([]);
+    const [cart, setCart] = useState([]);
 
 
     useEffect(() => {
@@ -15,6 +16,8 @@ const Items = () => {
     const addToCartBtn = (item) => {
 
         console.log(item.name);
+        const newCart = [...cart, item];
+        setCart(newCart);
 
     }
 
@@ -33,7 +36,9 @@ const Items = () => {
 
             </div>
             <div className="cart-container">
-                <h3>cart</h3>
+
+                <h3>Order summery</h3>
+                <h5>Selected item:{cart.length}</h5>
             </div>
         </div>
     );
