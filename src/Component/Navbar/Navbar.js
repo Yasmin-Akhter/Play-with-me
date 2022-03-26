@@ -1,5 +1,5 @@
 
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './Navbar.css'
 
 
 
@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <h1 className='bg-primary'>hello nav bar</h1>
+            <h1 className='navStyle'>Play With Me</h1>
 
         </div>
     );

@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# lucky-one-Yasmin-Akhter
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## link: https://github.com/Programming-Hero-Web-Course4/lucky-one-Yasmin-Akhter
 
 In the project directory, you can run:
 
