@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## link: https://github.com/Programming-Hero-Web-Course4/lucky-one-Yasmin-Akhter
+## link: https://lucky-one-yasmin-akhter-30007.netlify.app/
 
 In the project directory, you can run:
 
